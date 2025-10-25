@@ -64,9 +64,9 @@ with app.app_context():
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
-    debug = os.getenv('FLASK_ENV') == 'development'
+    debug = os.getenv('FLASK_ENV') != 'production'
     
     print(f"Starting Code Review API on port {port}")
-    print(f"Debug mode: {debug}")
+    print(f"Environment: {os.getenv('FLASK_ENV', 'development')}")
     
     app.run(host='0.0.0.0', port=port, debug=debug)

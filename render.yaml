@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: ai-code-reviewer
+    env: python
+    buildCommand: "cd backend && pip install -r requirements.txt"
+    startCommand: "cd backend && python app.py"
+    envVars:
+      - key: LLM_API_KEY
+        sync: false
+      - key: LLM_BASE_URL
+        value: https://api.groq.com/openai/v1
+      - key: LLM_MODEL
+        value: llama-3.3-70b-versatile
+      - key: DATABASE_URL
+        value: sqlite:///code_reviews.db
+      - key: TEST_MODE
+        value: false
+      - key: PORT
+        value: 10000
