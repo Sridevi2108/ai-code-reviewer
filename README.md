@@ -441,6 +441,5 @@ Pull requests are welcome! Please read the contributing guidelines first.
 
 ---
 
-**Built with ❤️ for the Machine Learning InceptAI test**
 
-Last Updated: October 25, 2025
+
